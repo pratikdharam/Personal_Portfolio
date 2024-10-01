@@ -142,3 +142,99 @@
                     </div>
                 </div>
             </section>
+
+        
+                <section class="section" id="projects">
+                    <div class="top-header">
+                        <h1>Projects</h1>
+                    </div>
+                    <div class="project-container">
+                        <div class="project-box" onclick="openModal('modal1')">
+                            <i class="uil uil-web-grid"></i>
+                            <h3>toDesktop Clone</h3>
+                            <label>A clone of the toDesktop website using Tailwind CSS.</label>
+                        </div>
+                        <div class="project-box" onclick="openModal('modal2')">
+                            <i class="uil uil-shopping-cart"></i>
+                            <h3>E-Commerce Platform</h3>
+                            <label>A fully functional online store with payment integration.</label>
+                        </div>
+                        <div class="project-box" onclick="openModal('modal3')">
+                            <i class="uil uil-database"></i>
+                            <h3>Inventory Management System</h3>
+                            <label>System for tracking stock levels and managing sales data.</label>
+                        </div>
+                    </div>
+                    
+                    <!-- Modal Structure -->
+                    <div id="modal1" class="modal">
+                        <div class="modal-content">
+                            <span class="close" onclick="closeModal('modal1')">&times;</span>
+                            <h2>toDesktop Clone</h2>
+                            <p>This project is a clone of the toDesktop website using Tailwind CSS. You can view it <a href="https://to-desktop-clone.netlify.app" target="_blank">here</a>.</p>
+                            <p>Features:</p>
+                            <ul>
+                                <li>Responsive design using Flexbox and CSS Grid.</li>
+                                <li>User authentication and profile management.</li>
+                                <li>Dynamic content loading with React.</li>
+                            </ul>                        </div>
+                    </div>
+                    
+                    <div id="modal2" class="modal">
+                        <div class="modal-content">
+                            <span class="close" onclick="closeModal('modal2')">&times;</span>
+                            <h2>E-Commerce Platform</h2>
+                            <p>This project features a fully functional online store with payment integration.</p>
+                            <p>Highlights:</p>
+                            <ul>
+                                <li>Product listing and filtering options.</li>
+                                <li>Shopping cart functionality with real-time updates.</li>
+                                <li>Secure payment processing with Stripe.</li>
+                            </ul>                        </div>
+                    </div>
+                    
+                    <div id="modal3" class="modal">
+                        <div class="modal-content">
+                            <span class="close" onclick="closeModal('modal3')">&times;</span>
+                            <h2>Inventory Management System</h2>
+                            <p>This project is a system for tracking stock levels and managing sales data.</p>
+                            <p>Key Features:</p>
+                            <ul>
+                                <li>Real-time stock level tracking.</li>
+                                <li>Sales reporting and analytics.</li>
+                                <li>User roles for different access levels.</li>
+                            </ul>                        </div>
+                    </div>
+                </section>
+        
+                <script>
+                    function myMenuFunction() {
+                        var menuBtn = document.getElementById("myNavMenu");
+                        menuBtn.className = (menuBtn.className === "nav-menu") ? "nav-menu responsive" : "nav-menu";
+                    }
+        
+                    function openModal(modalId) {
+                        document.getElementById(modalId).style.display = "block";
+                    }
+        
+                    function closeModal(modalId) {
+                        document.getElementById(modalId).style.display = "none";
+                    }
+        
+                    // Close modal when clicking outside of it
+                    window.onclick = function(event) {
+                        const modals = document.getElementsByClassName('modal');
+                        for (let i = 0; i < modals.length; i++) {
+                            if (event.target == modals[i]) {
+                                modals[i].style.display = "none";
+                            }
+                        }
+                    }
+                </script>
+            </div>
+        </body>
+        </html>
+
+       
+       
+       
